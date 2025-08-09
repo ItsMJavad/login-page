@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login">
+        <nav>
+            <a href="#" class="backbutton">
+                <button class="back" id="backbutton">
+                    <img src="Back.png" alt="Return Home" title="Return">
+                    <p>Back</p>
+                </button>
+            </a>
+        </nav>
+        <h1>WELCOME!</h1>
+        <form action="#" class="logininfo">
+            <div class="fullname">
+                <div class="firstname">
+                    <input type="text" name="firstname" id="firstname" autocomplete="off" required>
+                    <label for="firstname">First-Name</label>
+                </div>
+                <div class="lastname">
+                    <input type="text" name="lastname" id="lastname" autocomplete="off" placeholder="">
+                    <label for="lastname">Last-Name</label>
+                </div>
+            </div>
+            <div class="email">
+                <input type="email" name="email" id="email" placeholder="" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="password">
+                <input type="password" name="password" id="password" placeholder="" minlength="8" autocomplete="off"
+                    required>
+                <label for="password">Password</label>
+                <img src="eye-icon.png" alt="show-pass" class="eye-icon" onclick="togglePassword()">
+            </div>
+            <div class="gender">
+                <div class="male">
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">
+                        <p class="male-text">Male</p>
+                    </label>
+                </div>
+                <div class="female">
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">
+                        <p class="female-text">Female</p>
+                    </label>
+                </div>
+            </div>
+            <div class="agreement">
+                <input type="checkbox" name="agreement" id="agree" required>
+                <p class="text">I've read and accept the <a href="#">Terms and Conditions
+                        of Use</a>.</p>
+            </div>
+            <div class="submitbutton"><input type="submit" name="submit" id="submit"></div>
+        </form>
+    </div>
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+body {
+    background-image: url(loginimage.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* MAIN*/
+nav {
+    display: inline-block;
+}
+
+.login {
+    background-color: white;
+    width: 80%;
+    margin: 170px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px lightgrey;
+}
+
+.backbutton {
+    text-decoration: none;
+}
+
+#backbutton {
+    margin-left: 30px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid grey;
+    font-family: 'inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+#backbutton:hover {
+    box-shadow: 2px 1px 3px lightgrey;
+}
+
+.back img {
+    height: 30px;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+    background: -webkit-linear-gradient(135deg, lightgreen, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Brush Script MT;
+}
+
+.logininfo {
+    width: 85%;
+    margin: auto;
+    font-family: 'inter', sans-serif;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-left: 9px;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    color: gray;
+    font-size: 1rem;
+    font-family: 'inter', sans-serif;
+    pointer-events: none;
+    transition: 0.1s ease;
+    text-shadow: 0 0 1px gray;
+}
+
+::placeholder {
+    color: darkolivegreen;
+    font-size: 1rem;
+    font-family: Lato;
+}
+
+.fullname {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.fullname div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.firstname input:focus,
+.firstname input:valid {
+    outline: none;
+    border-color: rgb(31, 136, 168);
+}
+
+.firstname input:focus~label,
+.firstname input:valid~label {
+    transform: translateY(-20px) scale(0.8);
+    background: white;
+    padding: 0 3px;
+    color: rgb(31, 136, 168);
+}
+
+.lastname input:focus,
+.lastname input:not(:placeholder-shown) {
+    outline: none;
+    border-color: rgb(31, 136, 168);
+}
+
+.lastname input:focus~label,
+.lastname input:not(:placeholder-shown)~label {
+    transform: translateY(-20px) scale(0.8);
+    background: white;
+    padding: 0 3px;
+    color: rgb(31, 136, 168);
+}
+
+.email {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email input:focus,
+.email input:valid,
+.email input:not(:placeholder-shown) {
+    outline: none;
+    border-color: rgb(31, 136, 168);
+}
+
+.email input:focus~label,
+.email input:valid~label,
+.email input:not(:placeholder-shown)~label {
+    transform: translateY(-20px) scale(0.8);
+    background: white;
+    padding: 0 3px;
+    color: rgb(31, 136, 168);
+}
+
+.password {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0 auto 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password input:focus,
+.password input:valid,
+.password input:not(:placeholder-shown) {
+    outline: none;
+    border-color: rgb(31, 136, 168);
+}
+
+.password input:focus~label,
+.password input:valid~label,
+.password input:not(:placeholder-shown)~label {
+    transform: translateY(-20px) scale(0.8);
+    background: white;
+    padding: 0 3px;
+    color: rgb(31, 136, 168);
+}
+
+.password img {
+    position: absolute;
+    right: 0.7rem;
+    width: 1.5rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.gender {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 10px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+}
+
+.gender div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gender input {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.gender label {
+    width: 100%;
+    height: 100%;
+    left: unset;
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: white;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+.male,
+.male label {
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.female,
+.female label {
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.male-text,
+.female-text {
+    margin: 10px auto 0;
+    text-shadow: 0 0 3px gray;
+}
+
+.gender:has(input:checked) {
+    border-color: rgb(31, 136, 168);
+}
+
+.gender input:checked~label {
+    color: black;
+    background-color: inherit;
+    font-weight: 600;
+}
+
+.male:has(input:checked) {
+    background-color: lightblue;
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.female:has(input:checked) {
+    background-color: pink;
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.agreement {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#agree {
+    width: 20px;
+    cursor: pointer;
+}
+
+.text a {
+    font-weight: 600;
+}
+
+.submitbutton {
+    text-align: center;
+    perspective: 800px;
+}
+
+.submitbutton input {
+    background: linear-gradient(135deg, lightgreen, blue);
+    border: none;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: solid;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.submitbutton input:hover {
+    box-shadow: 0px 0px 7px grey;
+    transform: translate3d(0, 0, -15px);
+    transition: 150ms;
+}
+
+.submitbutton input:active {
+    background: orange;
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 100%;
+    }
+}
