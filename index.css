@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background-image: url(loginimage.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -94,6 +96,8 @@ label {
     margin-bottom: 10px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     gap: 5px;
@@ -193,8 +197,14 @@ label {
     position: absolute;
     right: 0.7rem;
     width: 1.5rem;
+    padding: 0.1rem;
     user-select: none;
     cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.password img.active {
+    background-color: rgb(199, 221, 228);
 }
 
 .gender {
@@ -321,6 +331,16 @@ label {
 
 @media (max-width: 768px) {
     .login {
-        width: 100%;
+        width: 95%;
+    }
+
+    .fullname {
+        height: fit-content;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fullname div input {
+        height: 2.5rem;
     }
 }

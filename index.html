@@ -38,7 +38,7 @@
                 <input type="password" name="password" id="password" placeholder="" minlength="8" autocomplete="off"
                     required>
                 <label for="password">Password</label>
-                <img src="eye-icon.png" alt="show-pass" class="eye-icon" onclick="togglePassword()">
+                <img src="eye-icon.png" alt="show-pass" class="eye-icon" id="eye-icon" onclick="togglePassword()">
             </div>
             <div class="gender">
                 <div class="male">
@@ -63,6 +63,11 @@
         </form>
     </div>
     <script>
+        const img = document.getElementById('eye-icon');
+
+        img.addEventListener('click', () => {
+            img.classList.toggle('active'); // Adds or removes "active" class
+        });
         function togglePassword() {
             const passwordInput = document.getElementById("password");
 
@@ -72,6 +77,7 @@
                 passwordInput.type = "password";
             }
         }
+
     </script>
 </body>
 
